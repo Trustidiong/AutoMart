@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        AutoMart
+    </title>
+</head>
+
+<body>
+    <!--The top Nav Bar-->
+    <!--....................-->
+    <!--The Automart logo-->
+    <div class="nav">
+        <h2>AutoMart</h2>
+    </div>
+    <!--The Menu Bar-->
+    <div class="menu">
+        <ul>
+            <li><a class="active" href="index.html">Home</a> </li>
+            <li><a href="browse.html">Browse</a> </li>
+            <li><a href="contact.html">Contact</a> </li>
+        </ul>
+    </div>
+    <!--The main boay of the work-->
+    <div class="mainBody">
+        <div id="welcome">
+            <!--Descriptive welcome text-->
+            <p>
+                <h2>Welcome to AutoMart!</h2> This is a one-stop online marketplace for automobiles of diverse makes, model or body type. </p>
+            <br/>
+            <p> Here, you can sell your cars or buy from trusted dealerships or other private sellers.</p>
+        </div>
+        <!--Login/Sign up div-->
+        <div id="signIn">
+
+            <form method="POST" action="">
+                <form id="signIn">
+                    <table id="signInTable">
+                        <tr>
+                            <td>Username:</td>
+                            <td><input type="text" name="Username" placeholder="Enter your username" id="inputs"></td>
+                        </tr>
+                        <tr><br /></tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" name="Password" placeholder="Password" id="inputs"></td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td></td>
+                            <td>
+
+                                <button type="submit" id="logInButton" onclick="login();">Log In</button>
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>New User?</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><a href="register.html"><button type="button" id="registerButton" a href="register.html">Register for free!</button></a></td>
+                        </tr>
+
+                    </table>
+                    <p id="response"></p>
+                </form>
+        </div>
+        <!--Login/Sign up div CLOSES HERE-->
+    </div>
+    <!--Footer-->
+    <footer>
+        &copy 2019 | Trust Effiong Idiong (in Andela Developer Challenge)
+    </footer>
+</body>
+
+</html>
