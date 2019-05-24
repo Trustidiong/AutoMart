@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        AutoMart
+    </title>
+</head>
+
+<body>
+    <!--The top Nav Bar-->
+    <!--....................-->
+    <!--The Automart logo-->
+    <div class="nav">
+        <h2>AutoMart</h2>
+    </div>
+
+    <!--The Menu Bar-->
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="browse.html">Browse</a> </li>
+            <li><a class="active" href="contact.html">Contact</a> </li>
+        </ul>
+    </div>
+
+    <!--The main boay of the work-->
+    <div class="mainBody">
+
+        <!--Sign up div style is also used here-->
+        <div id="signUp">
+
+            <!--Descriptive welcome text-->
+            <p> We would like to hear from you</p>
+            <form method="POST" id="contactForm">
+                <table id="signUpTable">
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="Username" placeholder="Please enter your full name" id="inputs" required></td>
+                    </tr>
+                    <tr><br /></tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="text" name="email" placeholder="Enter your email" id="inputs" required></td>
+                    </tr>
+                    <tr>
+                        <td>Comments:</td>
+                        <td><textarea type="text" name="email" placeholder="Enter text here ..." required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit" id="registerButton">Send information</button>
+                        </td>
+
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="Reset" id="logInButton">Cancel</button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <!--Sign up div CLOSES HERE-->
+    </div>
+    <!--Footer-->
+    <footer>
+        &copy 2019 | Trust Effiong Idiong (in Andela Developer Challenge)
+    </footer>
+</body>
+
+</html>
