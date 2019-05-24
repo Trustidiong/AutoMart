@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        AutoMart
+    </title>
+</head>
+
+<body>
+    <!--The top Nav Bar-->
+    <!--....................-->
+    <!--The Automart logo-->
+    <div class="nav">
+        <h2>AutoMart</h2>
+    </div>
+
+    <!--The Menu Bar-->
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a class="active" href="browse.html">Browse</a> </li>
+            <li><a href="contact.html">Contact</a> </li>
+        </ul>
+    </div>
+
+    <!--The main body of the work-->
+    <div class="browseBody">
+        <br/>
+        <br/>
+        <p id="choice"></p>
+        <p><strong>Take a pick from an impressive variety of choices!</strong></p>
+        <hr/>
+        <form method="POST" action="">
+            <table id="signUpTable">
+                <tr>
+                    <td><strong>View By:</strong> </td>
+                </tr>
+                <tr>
+                    <td>Manufacturer:</td>
+                    <td><select id="inputs">
+                            <option value="volvo">Volvo</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                            <option value="honda">Honda</option>
+                            <option value="tata">Tata</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="bugatti">Bugatti</option>
+                            <option value="ford">Ford</option>
+                            <option value="infiniti">Infiniti</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="aston">Aston-Martin</option>
+                        </select>
+                    </td>
+
+                    <td>State:</td>
+                    <td><select id="inputs">
+                            <option value="new">New</option>
+                            <option value="used">Used</option>
+                        </select>
+                    </td>
+
+                    <td>Price(N):</td>
+                    <td><select id="inputs">
+                            <option value="range_1">500,000 - 1,500,000</option>
+                            <option value="range_2">1,500,000 - 2,500,000</option>
+                            <option value="range_3">2,500,000 - 3,500,000</option>
+                            <option value="range_4">3,500,000 - 4,500,000</option>
+                            <option value="range_5">4,500,000 - 5,500,000</option>
+                            <option value="tata">greater than 5.5 million</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" id="registerButton" onclick="User()">Apply filter</button>
+                    </td>
+                    <td><button type="Reset" id="logInButton">Clear filter</button></td>
+
+                    <td><button type="submit" id="postButton" onclick="postAd()">Post Ad</button></td>
+                    <td><button type="submit" id="postButton" onclick="updateAd()">Update Ad</button></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+
+    <!--The main body of the work for phones-->
+    <div class="phones">
+        <br/>
+        <br/>
+        <p id="choice"></p>
+        <p><strong>Take a pick from an impressive variety of choices!</strong></p>
+        <hr/>
+        <form method="POST" action="">
+            <table id="signUpTable">
+                <tr>
+                    <td><strong>View By:</strong> </td>
+                </tr>
+                <tr>
+                    <td>Manufacturer:</td>
+                    <td><select id="inputs">
+                            <option value="volvo">Volvo</option>
+                            <option value="toyota">Toyota</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                            <option value="honda">Honda</option>
+                            <option value="tata">Tata</option>
+                            <option value="chevrolet">Chevrolet</option>
+                            <option value="bugatti">Bugatti</option>
+                            <option value="ford">Ford</option>
+                            <option value="infiniti">Infiniti</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="aston">Aston-Martin</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>State:</td>
+                    <td><select id="inputs">
+                            <option value="new">New</option>
+                            <option value="used">Used</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Price(N):</td>
+                    <td><select id="inputs">
+                            <option value="range_1">500,000 - 1,500,000</option>
+                            <option value="range_2">1,500,000 - 2,500,000</option>
+                            <option value="range_3">2,500,000 - 3,500,000</option>
+                            <option value="range_4">3,500,000 - 4,500,000</option>
+                            <option value="range_5">4,500,000 - 5,500,000</option>
+                            <option value="tata">greater than 5.5 million</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" id="registerButton" onclick="User()">Apply filter</button>
+                    </td>
+                    <td><button type="Reset" id="logInButton">Clear filter</button></td>
+                </tr>
+                <tr>
+                    <td><button type="submit" id="postButton" onclick="postAd()">Post Ad</button></td>
+                    <td><button type="submit" id="postButton" onclick="updateAd()">Update Ad</button></td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+
+
+    <!--Displays cars-->
+    <div id="display"></div>
+
+</body>
+
+</html>
