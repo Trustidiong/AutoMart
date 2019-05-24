@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        AutoMart
+    </title>
+</head>
+
+<body>
+    <!--The top Nav Bar-->
+    <!--....................-->
+    <!--The Automart logo-->
+    <div class="nav">
+        <h2>AutoMart</h2>
+    </div>
+
+    <!--The Menu Bar-->
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a> </li>
+            <li><a class="active" href="browse.html">Browse</a> </li>
+            <li><a href="contact.html">Contact</a> </li>
+        </ul>
+    </div>
+
+    <!--The browseBody is also used here-->
+    <div class="browseBody">
+        <br/>
+        <br/>
+        <p id="choice"></p>
+        <p><strong>This is for administrative use only!</strong></p>
+        <hr/>
+        <form method="POST" action="">
+            <table id="signUpTable">
+                <tr>
+                    <td>View Ads:</td>
+
+                    <td><select id="inputs">
+                            <option value="all">All</option>
+                            <option value="sold">Sold</option>
+                            <option value="unsold">Unsold</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        <button type="submit" id="registerButton" onclick="User()">Apply filter</button>
+                    </td>
+                    <td><button type="Reset" id="logInButton" onclick="delete()">Delete Ads</button></td>
+                </tr>
+
+
+            </table>
+        </form>
+
+    </div>
+
+    <!--Displays cars-->
+    <div id="display"></div>
+
+</body>
+
+</html>
