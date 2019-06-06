@@ -1,0 +1,259 @@
+FORMAT: 1A
+
+# Auto Mart
+
+Auto Mart is an online marketplace for automobiles of diverse makes, model or body type. With
+Auto Mart, users can sell their cars or buy from trusted dealerships or private sellers.
+
+## Sign Up Page [/auth/signup]
+
+As a user, you may sign up here.
+
+### Create A User Acount [POST]
+
++ Response 200 (application/json)
+
+        {
+            "status": 1,
+            "data": {
+                "token": "45erkjherht45495783",
+                "id": 1,
+                "first_name": "Trust",
+                "last_name": "Idiong",
+                "email": "idiongtrust@yahoo.com"
+            }
+        }
+
+    
+## Sign In Page [/auth/signin]
+
+As a user who had already signed up, you may sign in here.
+
+### Create A User Acount [POST]
+
++ Response 200 (application/json)
+
+        {
+            "status": 1,
+            "data": {
+                "token": "45erkjherht45495783",
+                "id": 1,
+                "first_name": "Trust",
+                "last_name": "Idiong",
+                "email": "idiongtrust@yahoo.com"
+            }
+
+## Post ads [/car/]
+
+You can create a car sale ad here
+
+### Create a car sale ad. [POST]
+
++ Response 200 (application/json)
+
+        {
+
+            "id": 2,
+            "owner": 2,
+            "created_on": "2019-05-23T12:34:22",
+            "state": "Old",
+            "status": "Sold",
+            "price": "800,000.00",
+            "manufacturer": "Toyota",
+            "model": "Avalon",
+            "body_type": "Sedan"
+
+        }
+        
+        
+## Purchase order [/order/]
+
+You can create a purchase order here
+
+### Create a purchase order. [POST]
+
++ Response 200 (application/json)
+
+        {
+            "status": 1,
+            "data": {
+                "id": 1,
+                "car_id": 1,
+                "created_on": "2019-02-18T12:34:22",
+                "status": "Pending",
+                "price": "1,500,000.00",
+                "price_offered": "1,000,000.00"
+    
+            }
+        }
+        
+## Order price update [/order/<:order-id>/price]      
+
+### Update the price of a purchase order. [PATCH]
+
+You can Update the price of a purchase order here while the order’s status still reads pending. 
+
++ Response 200 (application/json)
+
+        {
+            "status": 1,
+            "data": {
+                "id": 1,
+                "car_id": 1,
+                "status": "Pending",
+                "old_price_offered": "1,000,000.00",
+                "new_price_offered": "1,200,000.00"
+                    }
+        }
+        
+        
+## Sales price update [/car/<:order-id>/price]      
+
+### Update the price of a car. [PATCH]
+
+You can Update the price of a car here. 
+
++ Response 200 (application/json)
+
+        {
+            "status": 1,
+            "data": {
+                "id": 2,
+                "email": "celina@yahoo.com",
+                "created_on": "2019-05-23T12:34:22",
+                "manufacturer": "Toyota",
+                "model": "Avalon",
+                "price": "800,000.00",
+                "state": "Old",
+                "status": "Unsold"
+            }
+        }
+
+## Availability status update [/car/<:car-id>/status]      
+
+### Mark a posted car Ad as sold. [PATCH]
+
+You can Update the availability status of your posted ad here by marking posted it as sold.
+
+
++ Response 200 (application/json)
+
+        {
+            "status": 1,
+            "data": {
+                "id": 1,
+                "email": "celina@yahoo.com",
+                "created_on": "2019-05-23T12:34:22",
+                "manufacturer": "Toyota",
+                "model": "Avalon",
+                "price": "1,200,000.00",
+                "state": "New",
+                "status": "Sold"
+                    }
+        }
+
+## Specific car [/car/<:car-id>/]      
+
+### View a specific car. [GET]
+
+You can view a specific car.
+
++ Response 200 (application/json)
+
+        {
+            "id": 2,
+            "owner": 2,
+            "created_on": "2019-05-23T12:34:22",
+            "state": "Old",
+            "status": "Sold",
+            "price": "800,000.00",
+            "manufacturer": "Toyota",
+            "model": "Avalon",
+            "body_type": "Sedan"
+        }
+
+
+## Unsold cars [/car?status=available] 
+
+### View all unsold cars. [GET]
+
+You can view all unsold cars.
+
++ Response 200 (application/json)
+
+        {
+           "status": 1,
+            "data": [{
+                    "id": 1,
+                    "owner": 1,
+                    "created_on": "2019-04-23T12:34:22",
+                    "state": "New",
+                    "status": "Unsold",
+                    "price": "1,500,000.00",
+                    "manufacturer": "Toyota",
+                    "model": "Camry",
+                    "body_type": "Sedan"
+                },
+                {
+                    "id": 1,
+                    "owner": 1,
+                    "created_on": "2019-04-23T10:34:22",
+                    "state": "New",
+                    "status": "Unsold",
+                    "price": "3,500,000.00",
+                    "manufacturer": "Toyota",
+                    "model": "Higlander",
+                    "body_type": "SUV"
+                }
+            ]
+        }
+
+# Group Unsold cars
+
+## Unsold cars within a price range[/car?status=available&min_price= XXXValue &max_price= XXXValue]      
+
+### View all unsold cars within a price range. [GET]
+
+You can view all unsold cars.
+
++ Response 200 (application/json)
+
+        {
+           "status": 1,
+            "data": [{
+                    "id": 1,
+                    "owner": 1,
+                    "created_on": "2019-04-23T12:34:22",
+                    "state": "New",
+                    "status": "Unsold",
+                    "price": "1,500,000.00",
+                    "manufacturer": "Toyota",
+                    "model": "Camry",
+                    "body_type": "Sedan"
+                },
+                {
+                    "id": 1,
+                    "owner": 1,
+                    "created_on": "2019-04-23T10:34:22",
+                    "state": "New",
+                    "status": "Unsold",
+                    "price": "3,500,000.00",
+                    "manufacturer": "Toyota",
+                    "model": "Higlander",
+                    "body_type": "SUV"
+                }
+            ]
+        }
+        
+## Delete car Ad [/car/<:car-id>/]      
+
+### Delete a specific car Ad. [GET]
+
+You can delete a specific car Ad.
+
++ Response 200 (application/json)
+
+        {
+            "status": 1,
+            "data": "Car Ad successfully deleted"
+        }
