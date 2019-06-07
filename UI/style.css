@@ -1,38 +1,17 @@
-/* For mobile */
+.phones {
+    background-color: #D9D8D7;
+    width: 97%;
+    height: auto;
+    padding: 1.5%;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: none;
+}
 
-@media only screen and (max-width: 800px) {
-    .nav {
-        width: 950%;
-    }
-    .menu {
-        width: 100%;
-    }
-    .mainBody {
-        overflow: auto;
-    }
-    #welcome {
-        width: 95%;
-    }
-    #signUp {
-        width: 95%;
-        height: 450px;
-        margin-left: 2.5%;
-    }
-    #signIn {
-        width: 95%;
-        height: 370px;
-    }
-    .browseBody {
-        display: none;
-    }
+@media only screen and (max-width: 767px) {
     .phones {
-        background-color: #D9D8D7;
-        width: 97%;
-        height: auto;
-        padding: 1.5%;
-        color: #000000;
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
+        display: inline;
     }
 }
 
@@ -50,6 +29,12 @@
     height: 45px;
 }
 
+@media only screen and (max-width: 767px) {
+    .nav {
+        width: 97.5%;
+    }
+}
+
 .menu {
     background-color: #8C4227;
     width: 72.5%;
@@ -58,6 +43,12 @@
     float: left;
     height: 45px;
     display: block;
+}
+
+@media only screen and (max-width: 767px) {
+    .menu {
+        width: 100%;
+    }
 }
 
 ul {
@@ -106,6 +97,12 @@ li a:hover {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+@media only screen and (max-width: 767px) {
+    .mainBody {
+        height: 700px;
+    }
+}
+
 
 /* Main body of the "Browse" page is slightly different*/
 
@@ -119,8 +116,10 @@ li a:hover {
     text-align: center;
 }
 
-.phones {
-    display: none;
+@media only screen and (max-width: 767px) {
+    .browseBody {
+        display: none;
+    }
 }
 
 
@@ -151,6 +150,12 @@ li a:hover {
     font-size: 1em;
 }
 
+@media only screen and (max-width: 767px) {
+    #welcome {
+        width: 95%;
+    }
+}
+
 
 /* The signUp/signIn area styles */
 
@@ -170,6 +175,14 @@ li a:hover {
     text-align: center;
 }
 
+@media only screen and (max-width: 767px) {
+    #signUp {
+        width: 95%;
+        height: 450px;
+        margin-left: 2.5%;
+    }
+}
+
 #signIn {
     margin-top: 2.5%;
     margin-right: 2.5%;
@@ -184,6 +197,13 @@ li a:hover {
     z-index: 2;
 }
 
+@media only screen and (max-width: 767px) {
+    #signIn {
+        width: 95%;
+        height: 370px;
+    }
+}
+
 #signIn:hover,
 #signUp:hover {
     z-index: 3;
@@ -195,11 +215,11 @@ li a:hover {
     text-align: center;
     margin-top: 15%;
     width: 100%;
-    overflow-x: auto;
+    overflow-x: scroll;
 }
 
 #signUpTable {
-    text-align: center;
+    text-align: auto;
     margin-top: 2%;
     width: 100%;
     overflow-x: auto;
