@@ -61,3 +61,8 @@ register = () => {
 postAd = () => {
 
 }
+
+//function to handle poting of adverts
+Delete = () => {
+
+}
