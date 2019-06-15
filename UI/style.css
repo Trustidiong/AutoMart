@@ -1,53 +1,20 @@
-.phones {
-    background-color: #D9D8D7;
-    width: 97%;
-    height: auto;
-    padding: 1.5%;
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    display: none;
-}
-
-@media only screen and (max-width: 767px) {
-    .phones {
-        display: inline;
-    }
-}
-
-
 /* TOP NAV BAR */
 
 .nav {
     background-color: #8C4227;
-    width: 25%;
+    width: 98%;
     color: #ffffff;
     padding-left: 2.5%;
-    font-family: lobster;
+    font-family: Tahoma;
     float: left;
     clear: both;
-    height: 45px;
+    height: 55px;
+    display: flex;
 }
 
 @media only screen and (max-width: 767px) {
     .nav {
         width: 97.5%;
-    }
-}
-
-.menu {
-    background-color: #8C4227;
-    width: 72.5%;
-    color: #D9D8D7;
-    font-family: Arial, Helvetica, sans-serif;
-    float: left;
-    height: 45px;
-    display: block;
-}
-
-@media only screen and (max-width: 767px) {
-    .menu {
-        width: 100%;
     }
 }
 
@@ -66,17 +33,18 @@ li {
 li a {
     display: block;
     color: D9D8D7;
-    text-align: left;
-    padding: 14px 16px;
-}
-
-a {
+    text-align: right;
+    padding: 18px 26px;
     text-decoration: none;
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
+
 a.active {
-    background-color: #D9D8D7;
+    /* background-color: #D9D8D7;*/
     color: #000000;
 }
 
@@ -89,18 +57,12 @@ li a:hover {
 /* Main body of the page */
 
 .mainBody {
-    background-color: #D9D8D7;
+    background-color: #ffffff;
     width: 97%;
-    height: 550px;
+    height: 700px;
     padding: 1.5%;
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-@media only screen and (max-width: 767px) {
-    .mainBody {
-        height: 700px;
-    }
 }
 
 
@@ -118,7 +80,7 @@ li a:hover {
 
 @media only screen and (max-width: 767px) {
     .browseBody {
-        display: none;
+        padding-top: 25px;
     }
 }
 
@@ -126,7 +88,7 @@ li a:hover {
 /* Where the cars will be displayed in the browse body */
 
 #display {
-    background-color: #02592865;
+    background-color: #D9D8D7;
     width: 97%;
     height: auto;
     padding: 1.5%;
@@ -135,19 +97,43 @@ li a:hover {
     text-align: center;
 }
 
-#display:hover {
-    background-color: #0259288e;
-}
-
 
 /*The welcome text in the Main body*/
 
 #welcome {
-    padding-top: 2.5%;
-    width: 50%;
-    height: auto;
+    padding-top: 0.5%;
+    margin-top: 2.5%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    width: 90%;
+    height: 180px;
     float: left;
     font-size: 1em;
+    background-color: #f3f0f0;
+    text-align: center;
+    border-radius: 2.5%;
+    clear: both;
+}
+
+#pix {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 50%;
+    height: 350px;
+    float: left;
+    background-image: url(IMG1.jpeg);
+}
+
+@media only screen and (max-width: 767px) {
+    #pix {
+        width: 95%;
+        margin-top: 2%;
+    }
+}
+
+#pix:hover {
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.65);
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.65);
 }
 
 @media only screen and (max-width: 767px) {
@@ -158,6 +144,16 @@ li a:hover {
 
 
 /* The signUp/signIn area styles */
+
+#signIn {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 40%;
+    height: 350px;
+    float: left;
+    border-radius: 5%;
+    z-index: 2;
+}
 
 #signUp {
     margin-left: 25%;
@@ -171,7 +167,7 @@ li a:hover {
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5%;
     z-index: 2;
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 10px 10px 10px 10px grey;
     text-align: center;
 }
 
@@ -183,32 +179,19 @@ li a:hover {
     }
 }
 
-#signIn {
-    margin-top: 2.5%;
-    margin-right: 2.5%;
-    background-color: rgba(140, 66, 39, 0.473);
-    width: 40%;
-    height: 400px;
-    float: right;
-    color: #000000;
-    padding-left: 0.5%;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 5%;
-    z-index: 2;
-}
-
 @media only screen and (max-width: 767px) {
     #signIn {
         width: 95%;
         height: 370px;
+        background-color: #ffffff;
     }
 }
 
 #signIn:hover,
 #signUp:hover {
     z-index: 3;
-    background-color: rgba(140, 66, 39, 0.705);
-    box-shadow: 10px 10px 5px grey;
+    -webkit-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.65);
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.65);
 }
 
 #signInTable {
@@ -232,14 +215,19 @@ li a:hover {
     height: 35px;
     width: 80%;
     z-index: 2;
+    border: none;
+    border-radius: 0;
 }
 
+#logInButton:hover,
+#registerButton:hover,
 #inputs:hover {
-    box-shadow: 5px 5px 5px;
+    -webkit-box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.65);
+    box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.65);
 }
 
 textarea {
-    height: 80px;
+    height: 120px;
     width: 80%;
 }
 
@@ -249,55 +237,90 @@ textarea {
 #logInButton {
     height: 35px;
     width: 80%;
-    background-color: #f2857d;
-    color: #002278;
+    background-color: rgba(140, 66, 39, 0.85);
+    color: #ffffff;
     border: none;
     font-size: 1rem;
+    border: none;
 }
 
 #registerButton {
     height: 35px;
     width: 80%;
-    background-color: #002278;
-    color: #ffffff;
+    background-color: ffffff;
     border: none;
     font-size: 1rem;
 }
 
-#postButton {
-    height: 35px;
-    width: 80%;
-    background-color: #8C4227;
-    color: #ffffff;
-    border: none;
-    font-size: 1rem;
+#choices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: baseline;
 }
 
-
-/*...BUTTON HOVERS...*/
-
-#logInButton:hover {
-    background-color: #d94032;
+@media only screen and (max-width: 767px) {
+    #choices {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
-#postButton:hover {
-    background-color: rgb(114, 48, 24);
-    box-shadow: 5px 5px 5px grey;
+#choices1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-#registerButton:hover {
-    background-color: #0d00c4;
+@media only screen and (max-width: 767px) {
+    #choices1 {
+        align-items: flex-start;
+    }
+}
+
+#row1 {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50px;
+    width: 8%;
+    margin-left: 2%;
+    padding-top: 2%;
+}
+
+@media only screen and (max-width: 767px) {
+    #row1 {
+        width: 80%;
+        margin-left: 10%
+    }
+}
+
+#row2 {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50px;
+    width: 15%;
+    margin-left: 0%;
+    padding-top: 1%;
+}
+
+@media only screen and (max-width: 767px) {
+    #row2 {
+        width: 80%;
+        margin-left: 10%;
+        padding-top: 0%;
+    }
 }
 
 
 /* The footer */
 
 footer {
-    background-color: #8C4227;
+    background-color: rgba(140, 66, 39, 0.85);
     width: 97%;
     padding: 0.5%;
     color: #D9D8D7;
     padding-left: 2.5%;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    height: 30px;
+    position: relative;
+    float: left;
 }
