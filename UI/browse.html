@@ -3,8 +3,7 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <script src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,12 +18,8 @@
     <!--....................-->
     <!--The Automart logo-->
     <div class="nav">
-        <h2>AutoMart</h2>
-    </div>
+        <h3><i class="fas fa-tachometer-alt"></i> Auto Mart</h3>
 
-    <!--The Menu Bar-->
-
-    <div class="menu">
         <ul>
             <li><a href="index.html">Home</a> </li>
             <li><a class="active" href="browse.html">Browse</a> </li>
@@ -36,133 +31,65 @@
     <div class="browseBody">
         <br/>
         <br/>
-        <p id="choice"></p>
+
         <p><strong>Take a pick from an impressive variety of choices!</strong></p>
         <hr/>
-        <form method="POST" action="">
-            <table id="signUpTable">
-                <tr>
-                    <td><strong>View By:</strong> </td>
-                </tr>
-                <tr>
-                    <td>Manufacturer:</td>
-                    <td><select id="inputs">
-                            <option value="volvo">Volvo</option>
-                            <option value="toyota">Toyota</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
-                            <option value="honda">Honda</option>
-                            <option value="tata">Tata</option>
-                            <option value="chevrolet">Chevrolet</option>
-                            <option value="bugatti">Bugatti</option>
-                            <option value="ford">Ford</option>
-                            <option value="infiniti">Infiniti</option>
-                            <option value="hyundai">Hyundai</option>
-                            <option value="aston">Aston-Martin</option>
-                        </select>
-                    </td>
-
-                    <td>State:</td>
-                    <td><select id="inputs">
-                            <option value="new">New</option>
-                            <option value="used">Used</option>
-                        </select>
-                    </td>
-
-                    <td>Price(N):</td>
-                    <td><select id="inputs">
-                            <option value="range_1">500,000 - 1,500,000</option>
-                            <option value="range_2">1,500,000 - 2,500,000</option>
-                            <option value="range_3">2,500,000 - 3,500,000</option>
-                            <option value="range_4">3,500,000 - 4,500,000</option>
-                            <option value="range_5">4,500,000 - 5,500,000</option>
-                            <option value="tata">greater than 5.5 million</option>
-                        </select></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>
-                        <button type="submit" id="registerButton" onclick="User()">Apply filter</button>
-                    </td>
-                    <td><button type="Reset" id="logInButton">Clear filter</button></td>
-
-                    <td><button type="submit" id="postButton" onclick="postAd()">Post Ad</button></td>
-                    <td><button type="submit" id="postButton" onclick="updateAd()">Update Ad</button></td>
-                </tr>
-            </table>
-        </form>
-
     </div>
+    <div id="choices">
+        <div id="row1"><strong>View By:</strong></div>
 
-    <!--The main body of the work for phones-->
-    <div class="phones">
-        <br/>
-        <br/>
-        <p id="choice"></p>
-        <p><strong>Take a pick from an impressive variety of choices!</strong></p>
-        <hr/>
-        <form method="POST" action="">
-            <table id="signUpTable">
-                <tr>
-                    <td><strong>View By:</strong> </td>
-                </tr>
-                <tr>
-                    <td>Manufacturer:</td>
-                    <td><select id="inputs">
-                            <option value="volvo">Volvo</option>
-                            <option value="toyota">Toyota</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
-                            <option value="honda">Honda</option>
-                            <option value="tata">Tata</option>
-                            <option value="chevrolet">Chevrolet</option>
-                            <option value="bugatti">Bugatti</option>
-                            <option value="ford">Ford</option>
-                            <option value="infiniti">Infiniti</option>
-                            <option value="hyundai">Hyundai</option>
-                            <option value="aston">Aston-Martin</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>State:</td>
-                    <td><select id="inputs">
-                            <option value="new">New</option>
-                            <option value="used">Used</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Price(N):</td>
-                    <td><select id="inputs">
-                            <option value="range_1">500,000 - 1,500,000</option>
-                            <option value="range_2">1,500,000 - 2,500,000</option>
-                            <option value="range_3">2,500,000 - 3,500,000</option>
-                            <option value="range_4">3,500,000 - 4,500,000</option>
-                            <option value="range_5">4,500,000 - 5,500,000</option>
-                            <option value="tata">greater than 5.5 million</option>
-                        </select></td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>
-                        <button type="submit" id="registerButton" onclick="User()">Apply filter</button>
-                    </td>
-                    <td><button type="Reset" id="logInButton">Clear filter</button></td>
-                </tr>
-                <tr>
-                    <td><button type="submit" id="postButton" onclick="postAd()">Post Ad</button></td>
-                    <td><button type="submit" id="postButton" onclick="updateAd()">Update Ad</button></td>
-                </tr>
-            </table>
-        </form>
+        <div id="row1">Manufacturer:</div>
 
+        <div id="row2">
+            <select id="inputs">
+                <option value="volvo">Choose a Manufacturer</option>
+                <option value="volvo">Volvo</option>
+                <option value="toyota">Toyota</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+                <option value="honda">Honda</option>
+                <option value="tata">Tata</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="bugatti">Bugatti</option>
+                <option value="ford">Ford</option>
+                <option value="infiniti">Infiniti</option>
+                <option value="hyundai">Hyundai</option>
+                <option value="aston">Aston-Martin</option>
+            </select>
+        </div>
+
+        <div id="row1">State:</div>
+
+        <div id="row2">
+            <select id="inputs">
+                    <option value="new">New</option>
+                    <option value="used">Used</option>
+                </select>
+        </div>
+
+        <div id="row1">Price(N):</div>
+        <div id="row2">
+            <select id="inputs">
+                    <option value="volvo">Choose price range</option>
+                    <option value="range_1">500,000 - 1,500,000</option>
+                    <option value="range_2">1,500,000 - 2,500,000</option>
+                    <option value="range_3">2,500,000 - 3,500,000</option>
+                    <option value="range_4">3,500,000 - 4,500,000</option>
+                    <option value="range_5">4,500,000 - 5,500,000</option>
+                    <option value="tata">greater than 5.5 million</option>
+                </select>
+        </div>
     </div>
+    <div id="choices1">
+        <div id="row2"><button type="submit" id="registerButton">Apply filter</button></div>
 
+        <div id="row2"><button type="Reset" id="logInButton">Clear filter</button></div>
+
+        <div id="row2"><button type="submit" id="logInButton">Sell a car</button></div>
+
+        <div id="row2"><button type="submit" id="logInButton">Update my advert</button></div>
+    </div>
+    </div>
 
     <!--Displays cars-->
     <div id="display"></div>
