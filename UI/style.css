@@ -10,11 +10,14 @@
     clear: both;
     height: 55px;
     display: flex;
+    font-size: 1rem;
 }
 
 @media only screen and (max-width: 767px) {
     .nav {
         width: 97.5%;
+        padding-left: 1.5%;
+        font-size: 0.9rem;
     }
 }
 
@@ -37,6 +40,12 @@ li a {
     padding: 18px 26px;
     text-decoration: none;
     color: white;
+}
+
+@media only screen and (max-width: 767px) {
+    li a {
+        padding: 18px 6px;
+    }
 }
 
 a {
@@ -63,6 +72,12 @@ li a:hover {
     padding: 1.5%;
     color: #000000;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+    .mainBody {
+        padding-left: 0%;
+    }
 }
 
 
