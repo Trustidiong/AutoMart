@@ -16,7 +16,7 @@
 @media only screen and (max-width: 767px) {
     .nav {
         width: 97.5%;
-        padding-left: 1.5%;
+        padding-left: 5px;
         font-size: 0.9rem;
     }
 }
@@ -44,7 +44,7 @@ li a {
 
 @media only screen and (max-width: 767px) {
     li a {
-        padding: 18px 6px;
+        padding: 18px 2px;
     }
 }
 
@@ -76,6 +76,8 @@ li a:hover {
 
 @media only screen and (max-width: 767px) {
     .mainBody {
+        display: flex;
+        flex-direction: column;
         padding-left: 0%;
     }
 }
@@ -130,6 +132,14 @@ li a:hover {
     clear: both;
 }
 
+@media only screen and (max-width: 767px) {
+    #welcome {
+        margin-left: 0%;
+        padding: 2%;
+        width: 96%;
+    }
+}
+
 #pix {
     margin-left: 5%;
     margin-top: 5%;
@@ -141,6 +151,7 @@ li a:hover {
 
 @media only screen and (max-width: 767px) {
     #pix {
+        margin-left: 5px;
         width: 95%;
         margin-top: 2%;
     }
@@ -149,12 +160,6 @@ li a:hover {
 #pix:hover {
     -webkit-box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.65);
     box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.65);
-}
-
-@media only screen and (max-width: 767px) {
-    #welcome {
-        width: 95%;
-    }
 }
 
 
@@ -189,16 +194,20 @@ li a:hover {
 @media only screen and (max-width: 767px) {
     #signUp {
         width: 95%;
-        height: 450px;
-        margin-left: 2.5%;
+        margin-top: 2%;
+        padding-left: 5px;
+        margin-left: 5px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     #signIn {
         width: 95%;
-        height: 370px;
+        height: 570px;
         background-color: #ffffff;
+        padding-left: 5px;
+        margin-left: 5px;
+        padding-top: 5px;
     }
 }
 
